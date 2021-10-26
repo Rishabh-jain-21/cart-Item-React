@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "./Cart.css";
+import bin from "./bin.png";
+import add from "./add.png";
+import minus from "./minus.png";
 class CartComponent extends Component {
   // state is used is constructors in class based components and useState is hook is used in function based components
 
@@ -26,19 +29,19 @@ class CartComponent extends Component {
           <p style={{ marginTop: "-10px" }}>Rs : {price}</p>
           <p style={{ marginTop: "-20px" }}>Qty : {this.props.product.qty}</p>
           <img
-            src="https://cdn-icons-png.flaticon.com/512/992/992683.png"
+            src={minus}
             alt="Sorry For Error !!"
             className="image-buttons"
             onClick={() => this.props.onDecreaseQuantity(this.props.product)}
           />
           <img
-            src="https://cdn-icons-png.flaticon.com/512/992/992651.png"
+            src={add}
             alt="Sorry For Error !!"
             className="image-buttons left"
             onClick={() => this.props.onIncreaseQuantity(this.props.product)}
           />
           <img
-            src="https://cdn-icons.flaticon.com/png/512/484/premium/484611.png?token=exp=1635159463~hmac=6b33f75de3145ecdc31952a6961f6e4b"
+            src={bin}
             alt="Sorry For Error !!"
             className="image-buttons left"
             onClick={() => this.props.onDeleteComponent(this.props.product.id)}
