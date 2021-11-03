@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/cart-Item-React/static/css/main.55e52e9a.chunk.css",
-    "main.js": "/cart-Item-React/static/js/main.65dc7e2a.chunk.js",
-    "main.js.map": "/cart-Item-React/static/js/main.65dc7e2a.chunk.js.map",
-    "runtime-main.js": "/cart-Item-React/static/js/runtime-main.421f0ef9.js",
-    "runtime-main.js.map": "/cart-Item-React/static/js/runtime-main.421f0ef9.js.map",
-    "static/js/2.6dec1eb7.chunk.js": "/cart-Item-React/static/js/2.6dec1eb7.chunk.js",
-    "static/js/2.6dec1eb7.chunk.js.map": "/cart-Item-React/static/js/2.6dec1eb7.chunk.js.map",
-    "static/js/3.4c113db6.chunk.js": "/cart-Item-React/static/js/3.4c113db6.chunk.js",
-    "static/js/3.4c113db6.chunk.js.map": "/cart-Item-React/static/js/3.4c113db6.chunk.js.map",
+    "main.js": "/cart-Item-React/static/js/main.97dd1e71.chunk.js",
+    "main.js.map": "/cart-Item-React/static/js/main.97dd1e71.chunk.js.map",
+    "runtime-main.js": "/cart-Item-React/static/js/runtime-main.1d182db8.js",
+    "runtime-main.js.map": "/cart-Item-React/static/js/runtime-main.1d182db8.js.map",
+    "static/js/2.3ffcff84.chunk.js": "/cart-Item-React/static/js/2.3ffcff84.chunk.js",
+    "static/js/2.3ffcff84.chunk.js.map": "/cart-Item-React/static/js/2.3ffcff84.chunk.js.map",
+    "static/js/3.0465beae.chunk.js": "/cart-Item-React/static/js/3.0465beae.chunk.js",
+    "static/js/3.0465beae.chunk.js.map": "/cart-Item-React/static/js/3.0465beae.chunk.js.map",
     "index.html": "/cart-Item-React/index.html",
     "static/css/main.55e52e9a.chunk.css.map": "/cart-Item-React/static/css/main.55e52e9a.chunk.css.map",
-    "static/js/2.6dec1eb7.chunk.js.LICENSE.txt": "/cart-Item-React/static/js/2.6dec1eb7.chunk.js.LICENSE.txt",
+    "static/js/2.3ffcff84.chunk.js.LICENSE.txt": "/cart-Item-React/static/js/2.3ffcff84.chunk.js.LICENSE.txt",
     "static/media/add.13269664.png": "/cart-Item-React/static/media/add.13269664.png",
     "static/media/bin.c4f0af28.png": "/cart-Item-React/static/media/bin.c4f0af28.png",
     "static/media/minus.4a4bdce7.png": "/cart-Item-React/static/media/minus.4a4bdce7.png",
@@ -19,9 +19,9 @@
     "static/media/shopping-cart.93afd1c3.png": "/cart-Item-React/static/media/shopping-cart.93afd1c3.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.421f0ef9.js",
-    "static/js/2.6dec1eb7.chunk.js",
+    "static/js/runtime-main.1d182db8.js",
+    "static/js/2.3ffcff84.chunk.js",
     "static/css/main.55e52e9a.chunk.css",
-    "static/js/main.65dc7e2a.chunk.js"
+    "static/js/main.97dd1e71.chunk.js"
   ]
 }
