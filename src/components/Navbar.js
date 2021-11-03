@@ -1,6 +1,6 @@
 import React from "react";
 import cartImg from "./shopping-cart.png";
-import shop from "./shop.png";
+import shopIcon from "./shop.png";
 const Navbar = (props) => {
   return (
     <div style={styles.nav}>
@@ -8,9 +8,9 @@ const Navbar = (props) => {
         style={{ display: "flex", alignItems: "center", color: "aliceblue" }}
       >
         <img
-          src={shop}
+          src={shopIcon}
           alt="icon_photu"
-          style={{ height: 45, paddingLeft: "20px" }}
+          style={{ height: 45, padding: "0px 10px 0px 15px" }}
         />
         <h2 style={{ marginTop: "10px" }}>Shop-Shit</h2>
       </div>
@@ -37,7 +37,7 @@ const styles = {
   },
   cartIconContainer: {
     position: "relative",
-    paddingRight: "10px",
+    paddingRight: "20px",
   },
   cartCount: {
     height: "25px",
@@ -48,7 +48,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    right: 15,
+    right: 22,
     top: -9,
   },
 };

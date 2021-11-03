@@ -1,33 +1,13 @@
 import React, { Component } from "react";
 import Cart from "./components/Cart";
 import Navbar from "./components/Navbar";
+import * as firebase from "firebase";
 export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      products: [
-        {
-          id: 1,
-          price: 3999,
-          title: "Boat Watch",
-          qty: 1,
-          img: "https://rukminim1.flixcart.com/image/416/416/kkprmvk0/smartwatch/v/j/n/storm-android-ios-boat-original-imafzzu29tguvtqg.jpeg?q=70",
-        },
-        {
-          id: 2,
-          price: 13999,
-          title: "LED TV",
-          qty: 1,
-          img: "https://m.media-amazon.com/images/I/913DBkJKHZL._AC_SR180,120_QL70_.jpg",
-        },
-        {
-          id: 3,
-          price: 41999,
-          title: "DELL I5",
-          qty: 1,
-          img: "https://m.media-amazon.com/images/I/51qwcXo1lCL._AC_UY327_FMwebp_QL65_.jpg",
-        },
-      ],
+      products: [],
+      loading: false,
     };
   }
   getCount = () => {
@@ -45,6 +25,7 @@ export default class App extends Component {
     let total = 0;
     products.map((elm) => {
       total = total + elm.qty * elm.price;
+      return "";
     });
     return total;
   };
@@ -68,6 +49,53 @@ export default class App extends Component {
     const items = this.state.products.filter((item) => item.id !== id); // items array contains filtered array without that particulat component
     this.setState({ products: items });
   };
+
+  // fetching the data from firebase
+  // componentDidMount() {
+  //   this.setState({
+  //     loading: true,
+  //   });
+  //   firebase
+  //     .firestore()
+  //     .collection("products")
+  //     .get()
+  //     .then((snapshot) => {
+  //       const productsItem = snapshot.docs.map((elm) => {
+  //         const data = elm.data();
+  //         data["id"] = elm.id;
+  //         // console.log(data);
+  //         return data;
+  //       });
+  //       this.setState({
+  //         products: productsItem,
+  //         loading: false,
+  //       });
+  //     });
+  // }
+
+  //second method to fetch
+  // this method is live as we change something on our firebase server it returns us the value
+  componentDidMount() {
+    this.setState({
+      loading: true,
+    });
+    firebase
+      .firestore()
+      .collection("products")
+      .onSnapshot((snapshot) => {
+        const productsItem = snapshot.docs.map((elm) => {
+          const data = elm.data();
+          data["id"] = elm.id;
+          // console.log(data);
+          return data;
+        });
+        this.setState({
+          products: productsItem,
+          loading: false,
+        });
+      });
+  }
+
   render() {
     const { products } = this.state;
     return (
@@ -79,6 +107,10 @@ export default class App extends Component {
           onDecreaseQuantity={this.handleDecreaseQuantity}
           onDeleteComponent={this.handleDeleteComponent}
         />
+        {/* using conditional rendering for loading by using && */}
+        {this.state.loading && (
+          <h1 style={{ textAlign: "center" }}>Loading Cart Items ..</h1>
+        )}
         <div className="container my-3">
           <h3>Total Price : {this.totalPriceCharge()}</h3>
         </div>
