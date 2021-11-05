@@ -5,7 +5,7 @@ const Cart = (props) => {
   //destructuring the products array taking as prop from app.js
   const { products } = props;
   return (
-    <div className="Cart-body container">
+    <div className="center Cart-body container ">
       {products.map((product) => {
         return (
           <CartComponent

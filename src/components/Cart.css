@@ -36,7 +36,10 @@ p {
   }
 }
 @media screen and (max-width: 860px) {
-  .Cart-body {
-    grid-template-columns: repeat(1, 1fr);
+  .center {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
